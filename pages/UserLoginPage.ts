@@ -5,5 +5,7 @@ public passwordField = 'xpath=//input[@class="password"]'
 public loginButton = 'xpath=(//button[@type="submit"])[2]'
 public NopCommerceLogo = 'xpath=//img[@alt="nopCommerce demo store"]'
 public logoutButton = 'xpath=//a[@class="ico-logout"]'
+public SignText = 'xpath=//div[@class="page-title"]'
+public LoginErrorMessage = 'xpath=//div[@class="message-error validation-summary-errors"]'
 }
 export default UserLoginPage;
