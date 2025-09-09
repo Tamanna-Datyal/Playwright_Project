@@ -29,7 +29,7 @@ const config: PlaywrightTestConfig = {
     },
     use: {
         trace: 'on-first-retry',
-        screenshot: 'on',
+        screenshot: 'off',
     }
 };
 

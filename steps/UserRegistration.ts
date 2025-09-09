@@ -12,14 +12,14 @@ const userReg = new UserRegistartion();
 Given('User is on the registration page', async function () {
     const { page } = this;
     await page?.goto(testConfig.SI_URL)
-    this.attach("Login page opened and Validated");
+    this.attach("Login page opened ");
     await page?.locator(userReg.registrationPage).click();
     await page?.locator(userReg.registerText).isVisible(); 
     //  await page?.waitForLoadState('networkidle');
-    const loginScreenshot = await this.page?.screenshot();
-    if (loginScreenshot) {
-        await this.attach(loginScreenshot, 'image/png');
-    }
+    // const loginScreenshot = await this.page?.screenshot();
+    // if (loginScreenshot) {
+    //     await this.attach(loginScreenshot, 'image/png');
+    // }
 });
 
 When('Enter mandatory fields', async function (this: MyWorld) {
