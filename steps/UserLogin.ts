@@ -2,20 +2,22 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { ICustomWorld } from '../support/custom-world';
 import UserLoginPage from '../pages/UserLoginPage';
+import UserRegistartion from '../pages/UserRegistrationPage';
+import { CommonMethods } from "../utils/CommonMethods";
+import { testConfig } from '../support/Reporters/testConfig';
 
 const userLogin = new UserLoginPage();
+const userReg = new UserRegistartion();
+const email = CommonMethods.generateEmail();
+const password = CommonMethods.generatePassword()
 
 Given('User is on the login page', async function () {
   const { page } = this;
-  await page?.goto("https://demo.nopcommerce.com/")
-  // await page?.goto("").catch((e) => {
-  //    page?.goto("");
-  //  });
-
+  await page?.goto(testConfig.SI_URL)
+ 
   this.attach("Login page opened and Validated");
   await page?.locator(userLogin.loginPage).click();
-  await page?.locator(userLogin.SignText).isVisible(); ``
-//  await page?.waitForLoadState('networkidle');
+  await page?.locator(userLogin.SignText).isVisible(); 
   const loginScreenshot = await this.page?.screenshot();
   if (loginScreenshot) {
     await this.attach(loginScreenshot, 'image/png');
@@ -25,8 +27,8 @@ Given('User is on the login page', async function () {
 
 When('enter a valid email and password', async function () {
   const { page } = this;
-  await page?.locator(userLogin.emailField).fill("User@gmail.com")
-  await page?.locator(userLogin.passwordField).fill("Tanu2460@-")
+  await page?.locator(userLogin.emailField).fill(email)
+  await page?.locator(userLogin.passwordField).fill(password)
   const credentialScreenshot = await this.page?.screenshot();
   if (credentialScreenshot) {
     await this.attach(credentialScreenshot, 'image/png');
@@ -41,7 +43,7 @@ When('click on the Login button', async function () {
 });
 Then('User should be redirected to the homepage', async function () {
   const { page } = this;
-  await expect(page).toHaveURL("https://demo.nopcommerce.com/");
+  await expect(page).toHaveURL(testConfig.SI_URL);
   await page?.locator(userLogin.NopCommerceLogo).isVisible();
   const homeScreenshot = await this.page?.screenshot();
 });
@@ -54,8 +56,8 @@ Then('User should able to logout', async function () {
 
 When('enter a valid email and invalid password', async function () {
     const { page } = this;
-  await page?.locator(userLogin.emailField).fill("User@gmail.com")
-  await page?.locator(userLogin.passwordField).fill("Tanu2460@_")
+  await page?.locator(userLogin.emailField).fill(email)
+  await page?.locator(userLogin.passwordField).fill(password)
   const credentialScreenshot = await this.page?.screenshot();
   if (credentialScreenshot) {
     await this.attach(credentialScreenshot, 'image/png');
