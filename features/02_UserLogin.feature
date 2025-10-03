@@ -1,6 +1,6 @@
 Feature: User Login Feature
 
-  @Scenario1 @Login
+  @Scenario1 @registration
   Scenario: Successful login with valid credentials
     Given User is on the login page
     When enter a valid email and password
@@ -8,7 +8,7 @@ Feature: User Login Feature
     Then User should be redirected to the homepage
     And User should able to logout
 
-  @Scenario2 @Login2
+  @Scenario2 @registration
   Scenario: Login fails with incorrect password
     Given User is on the login page
     When enter a valid email and invalid password

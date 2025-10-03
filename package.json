@@ -14,6 +14,7 @@
     "allure-cucumberjs8": "^2.0.0-beta.15",
     "allure-js-commons": "^3.3.3",
     "allure-playwright": "^3.3.3",
+    "multiple-cucumber-html-reporter": "^3.9.3",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
