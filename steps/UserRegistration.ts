@@ -20,6 +20,7 @@ Given('User is on the registration page', async function () {
     // if (loginScreenshot) {
     //     await this.attach(loginScreenshot, 'image/png');
     // }
+   
 });
 
 When('Enter mandatory fields', async function (this: MyWorld) {

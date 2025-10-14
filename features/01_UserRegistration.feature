@@ -1,7 +1,5 @@
 Feature: User Registration Feature
 
-Feature: User Registration
-
  @Scenario1 @registration
     Scenario: Successful user registration
         Given User is on the registration page

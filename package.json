@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js -c cucumber.mjs"
+    "test": "cucumber-js -c cucumber.mjs",
+     "test:parallel": "cucumber-js --parallel 4"
+ 
   },
   "keywords": [],
   "author": "",

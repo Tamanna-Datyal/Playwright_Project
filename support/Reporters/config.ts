@@ -5,7 +5,7 @@ export const bbrowserOptions: LaunchOptions = {
     slowMo: 1200,
     headless: false,
     channel: 'chromium',
-   
+
 
     args: ['--start-maximized',
         "--uise-fake-ui-for-media-stream",
@@ -28,8 +28,7 @@ const config: PlaywrightTestConfig = {
         reuseExistingServer: true
     },
     use: {
-        trace: 'on-first-retry',
-        screenshot: 'off',
+         trace: 'on',
     }
 };
 
