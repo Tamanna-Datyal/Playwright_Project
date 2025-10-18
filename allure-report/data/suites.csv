@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","4555","Get the created user","","Sat Oct 18 10:39:00 IST 2025","passed","Sat Oct 18 10:39:04 IST 2025","","","",""
+"","4108","Verify deleted user returns 404","","Sat Oct 18 10:39:15 IST 2025","passed","Sat Oct 18 10:39:19 IST 2025","","","",""
+"","5050","Update the created user","","Sat Oct 18 10:39:04 IST 2025","passed","Sat Oct 18 10:39:09 IST 2025","","","",""
+"","7539","Create a new user","","Sat Oct 18 10:38:52 IST 2025","passed","Sat Oct 18 10:39:00 IST 2025","","","",""
+"","5164","Delete the created user","","Sat Oct 18 10:39:09 IST 2025","passed","Sat Oct 18 10:39:15 IST 2025","","","",""

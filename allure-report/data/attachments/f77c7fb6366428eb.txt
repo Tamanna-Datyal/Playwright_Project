@@ -1,0 +1,4 @@
+🟩 RESPONSE:
+{
+  "message": "Resource not found"
+}

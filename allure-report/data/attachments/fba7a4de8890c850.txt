@@ -1,0 +1,7 @@
+🟦 REQUEST: POST https://gorest.co.in/public/v2/users
+{
+  "name": "Tamanna94026",
+  "email": "tamanna94026@example.com",
+  "gender": "female",
+  "status": "active"
+}

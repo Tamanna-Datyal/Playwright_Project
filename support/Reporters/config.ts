@@ -19,16 +19,16 @@ export const bbrowserOptions: LaunchOptions = {
 };
 expect.extend(playwrightApiMatchers);
 const config: PlaywrightTestConfig = {
-    reporter: [['html', { open: 'never' }]],
+    //reporter: [['html', { open: 'never' }],['list'], ['allure-playwright']],
     globalSetup: './support/Reporters/global-setup',
-    webServer: {
-        command: 'npx allure generate ./reports/allure-results --clean -o ./reports/allure-report',
-        timeout: 20000,
-        url: 'http://localhost:3000',
-        reuseExistingServer: true
-    },
+    // webServer: {
+    //     command: 'npx allure generate ./reports/allure-results --clean -o ./reports/allure-report',
+    //     timeout: 20000,
+    //     url: 'http://localhost:3000',
+    //     reuseExistingServer: true
+    // },
     use: {
-         trace: 'on',
+         trace: 'off',
     }
 };
 
