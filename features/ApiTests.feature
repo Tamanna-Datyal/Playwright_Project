@@ -22,7 +22,7 @@ Feature:API CRUD Operations on GoREST Users
   @Scenario2 @api
   Scenario: Get the created user
     Given I send a GET request to "/users/{userId}"
-    Then The response status should be 200
+    Then The response status should be 201
     And The response "name" should be "Tamanna"
     And The response "status" should be "active"
     And I attach request and response to report

@@ -1,8 +1,0 @@
-🟩 RESPONSE:
-{
-  "id": 8192308,
-  "name": "Tamanna94026",
-  "email": "tamanna94026@example.com",
-  "gender": "female",
-  "status": "active"
-}

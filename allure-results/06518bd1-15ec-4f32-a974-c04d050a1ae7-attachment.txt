@@ -1,0 +1,8 @@
+🟩 Final Response Data:
+{
+  "name": "Tamanna Updated",
+  "status": "inactive",
+  "id": 8199717,
+  "email": "tamanna12615@example.com",
+  "gender": "female"
+}

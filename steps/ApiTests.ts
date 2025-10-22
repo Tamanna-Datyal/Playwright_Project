@@ -1,6 +1,6 @@
 import { Given, Then } from "@cucumber/cucumber";
-import { expect, request, APIResponse } from "@playwright/test";
-
+import { request, APIResponse } from "@playwright/test";
+import{expect as chaiExpect, expect} from 'chai';
 let response: APIResponse;
 let apiContext: any;
 let userId: number;
@@ -75,25 +75,29 @@ Given('I send a DELETE request to {string}', async function (endpoint: string) {
 // ------------------- VALIDATIONS -------------------
 Then('The response status should be {int}', async function (statusCode: number) {
   this.attach(`🔹 EXPECTED STATUS: ${statusCode}\n🔹 ACTUAL STATUS: ${response.status()}`);
-  expect(response.status()).toBe(statusCode);
+  //expect(response.status()).toBe(statusCode);
+  expect(response.status()).to.equal(statusCode);
 });
 
 Then('The response should contain {string}', async function (text: string) {
   const bodyText = JSON.stringify(await response.json());
   this.attach(`🔍 Validating body contains: ${text}`);
-  expect(bodyText).toContain(text);
+ // expect(bodyText).toContain(text);
+ expect(bodyText).to.include(text);
 });
 
 Then('The response should have a valid {string}', async function (fieldName: string) {
   const json = await response.json();
   this.attach(`🔍 Validating field "${fieldName}" exists and is valid`);
-  expect(json[fieldName]).toBeTruthy();
+  //expect(json[fieldName]).toBeTruthy();
+  expect(json[fieldName]).to.exist;
 });
 
 Then('The response {string} should be {string}', async function (fieldName: string, expectedValue: string) {
   const json = await response.json();
   this.attach(`🔍 Checking "${fieldName}" value: expected=${expectedValue}, actual=${json[fieldName]}`);
-  expect(json[fieldName]).toContain(expectedValue);
+ // expect(json[fieldName]).toContain(expectedValue);
+  expect(json[fieldName]).to.equal(expectedValue);
 });
 
 Then('I attach request and response to report', async function () {

@@ -1,0 +1,5 @@
+🟦 REQUEST: PUT https://gorest.co.in/public/v2/users/8199717
+{
+  "name": "Tamanna Updated",
+  "status": "inactive"
+}

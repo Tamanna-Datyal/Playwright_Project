@@ -4,7 +4,7 @@ import playwrightApiMatchers from 'odottaa';
 export const bbrowserOptions: LaunchOptions = {
     slowMo: 1200,
     headless: false,
-    channel: 'chromium',
+    //channel: 'chromium',
 
 
     args: ['--start-maximized',
@@ -17,6 +17,7 @@ export const bbrowserOptions: LaunchOptions = {
     }
 
 };
+
 expect.extend(playwrightApiMatchers);
 const config: PlaywrightTestConfig = {
     //reporter: [['html', { open: 'never' }],['list'], ['allure-playwright']],
