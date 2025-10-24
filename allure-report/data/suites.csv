@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","19020","Successful user registration","","Fri Oct 24 12:38:56 IST 2025","passed","Fri Oct 24 12:39:15 IST 2025","","","",""
+"","10321","Add product to cart","","Fri Oct 24 12:39:24 IST 2025","passed","Fri Oct 24 12:39:35 IST 2025","","","",""
+"","9311","Successful login with valid credentials","","Fri Oct 24 12:39:15 IST 2025","passed","Fri Oct 24 12:39:24 IST 2025","","","",""
