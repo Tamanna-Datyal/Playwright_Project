@@ -49,6 +49,7 @@ Then('User should be redirected to the homepage', async function () {
   await expect(page).toHaveURL(testConfig.SI_URL);
   await page?.locator(userLogin.NopCommerceLogo).isVisible();
   const homeScreenshot = await this.page?.screenshot();
+ // await page?.locator(userLogin.comtinueButton).click();
 });
 Then('User should able to logout', async function () {
   const { page } = this;

@@ -1,4 +1,0 @@
-🟩 Final Response Data:
-{
-  "message": "Resource not found"
-}
